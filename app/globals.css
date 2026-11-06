@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-fredoka: 'Fredoka', cursive, sans-serif;
+  --font-nunito: 'Nunito', sans-serif;
+}
+
+/* Balanced, clean font styling */
+html, body {
+  background-color: #0E0E12;
+  color: #F4F4F6;
+  font-family: var(--font-nunito), 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  overflow-x: hidden;
+  selection-background-color: #FF5A1F;
+  selection-color: #FFFFFF;
+}
+
+::selection {
+  background: #FF5A1F;
+  color: #FFFFFF;
+}
+
+/* Balanced Fredoka Headings */
+h1, .display-heading {
+  font-family: var(--font-fredoka), 'Fredoka', cursive, sans-serif !important;
+  font-size: clamp(32px, 4vw, 48px) !important;
+  font-weight: 600 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.01em;
+}
+
+h2, .sub-heading-lg {
+  font-family: var(--font-fredoka), 'Fredoka', cursive, sans-serif !important;
+  font-size: clamp(24px, 3vw, 34px) !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+}
+
+h3, .sub-heading-md {
+  font-family: var(--font-fredoka), 'Fredoka', cursive, sans-serif !important;
+  font-size: clamp(18px, 2.2vw, 24px) !important;
+  font-weight: 600 !important;
+  line-height: 1.25 !important;
+}
+
+/* Nunito body text */
+p, span, li, button, input, label, div {
+  font-family: var(--font-nunito), 'Nunito', sans-serif;
+}
+
+/* Crisp, elegant D2C Fizz-inspired cards */
+.fizz-card {
+  background: #17171E;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
+}
+
+.fizz-card-hover {
+  transition: all 0.25s ease;
+}
+.fizz-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 90, 31, 0.4);
+  box-shadow: 0 16px 36px -12px rgba(255, 90, 31, 0.2);
+}
+
+/* Clean glassmorphism */
+.fizz-glass {
+  background: rgba(23, 23, 30, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+/* Soft scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0E0E12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2C2C38;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF5A1F;
+}
